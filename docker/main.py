@@ -54,7 +54,7 @@ def get_environmental_variables() -> EnvironmentalVariables:
             record_id=os.environ.get("RECORD_ID", ""),
             name=os.environ.get("NAME", ""),
             ttl=int(os.environ.get("TTL", "1")),
-            type='A'
+            type='A',
             # type=os.environ.get("TYPE", ""),
             time_interval=int(os.environ.get("TIME_INTERVAL", ""))
         )
