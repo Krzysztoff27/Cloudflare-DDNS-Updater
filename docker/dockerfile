@@ -1,0 +1,16 @@
+# syntax=docker/dockerfile:1.7-labs
+
+FROM python:3.14-alpine
+
+LABEL org.opencontainers.image.source=https://github.com/Krzysztoff27/Cloudflare-DDNS-Updater
+LABEL org.opencontainers.image.description="Cloudflare Dynamic DNS Updater"
+LABEL org.opencontainers.image.licenses=MIT
+
+WORKDIR /cloudflare-ddns-updater
+
+COPY ./requirements.txt /cloudflare-ddns-updater/requirements.txt
+RUN pip install --no-cache-dir --upgrade -r /cloudflare-ddns-updater/requirements.txt
+
+COPY ./main.py /cloudflare-ddns-updater/main.py
+
+CMD ["python", "main.py"]

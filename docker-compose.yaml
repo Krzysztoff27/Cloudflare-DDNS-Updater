@@ -1,0 +1,14 @@
+services:
+  cloudflare-ddns-updater:
+    container_name: "ghcr.io/krzysztoff27/cloudflare-ddns-updater:latest"
+    restart: always
+    image: cloudflare-ddns-updater:latest
+    environment:
+      - LOG_LEVEL=${LOG_LEVEL}
+      - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
+      - ZONE_ID=${ZONE_ID}
+      - RECORD_ID=${RECORD_ID}
+      - NAME=${NAME}
+      - TTL=${TTL}
+      - TYPE=${TYPE}
+      - TIME_INTERVAL=${TIME_INTERVAL}
