@@ -43,7 +43,7 @@ jobs:
             - name: Build and push Cloudflare-DDNS-Updater Docker image
               uses: docker/build-push-action@v4
               with:
-                context: cloudflare-ddns-updater
+                context: .
                 file: docker/dockerfile
                 push: true
                 tags: |
