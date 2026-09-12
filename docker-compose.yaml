@@ -1,8 +1,8 @@
 services:
   cloudflare-ddns-updater:
-    container_name: "ghcr.io/krzysztoff27/cloudflare-ddns-updater:latest"
+    container_name: cloudflare-ddns-updater
     restart: always
-    image: cloudflare-ddns-updater:latest
+    image: "ghcr.io/krzysztoff27/cloudflare-ddns-updater:latest"
     environment:
       - LOG_LEVEL=${LOG_LEVEL}
       - CLOUDFLARE_API_TOKEN=${CLOUDFLARE_API_TOKEN}
