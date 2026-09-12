@@ -18,13 +18,13 @@ Sets the desired log level verbosity - can be either INFO or DEBUG. By default i
 - `CLOUDLFARE_API_TOKEN`
 - `ZONE_ID`
 - `RECORD_ID`
-- `NAME`
-\nThe domain name set in the A record, eg. subdomain.mydomain.com
-- `TTL`
+- `NAME`\
+The domain name set in the A record, eg. subdomain.mydomain.com
+- `TTL`\
 TTL parameter of the record. By default it is set to Auto.
-- `TYPE`
+- `TYPE`\
 Type of the record to update. Right now only A type is supported - setting any other type will not change any functionality.
-- `TIME_INTERVAL`
+- `TIME_INTERVAL`\
 How often should the Public IP address be fetched in seconds.
 
 # Building a container
